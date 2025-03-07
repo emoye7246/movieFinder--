@@ -1,20 +1,28 @@
-import { useEffect, useState } from 'react'
 import { Navbar } from './Navbar/Navbar'
 import { Outlet } from 'react-router-dom'
+
+
+
 
 export const App = () =>  {
 
 
+
   return (
-    <>
-       <div className='flex flex-row max-w-full min-h-full'>
+      <>
+        <div className='flex flex-row max-w-screen h-screen'>
             
-              <Navbar />
+            <Navbar />
 
-              <Outlet />
 
-       </div>
-    </>
+            <div>
+                <Outlet />
+            </div>
+
+        </div>
+
+
+      </>
   )
 }
 
