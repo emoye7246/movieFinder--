@@ -5,4 +5,33 @@
     display: none;
 }
 
+@font-face {
+    font-family: 'playfairText';
+    src: url('/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'Robotos';
+    src: url('/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Fonts/Roboto/static/Roboto_SemiCondensed-Regular.ttf');
+  }
+  
+
+@keyframes fade-in {
+        
+    from{
+  
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+  #fade{
+
+    animation: fade-in 1s ease-in backwards;
+  }
+  
 

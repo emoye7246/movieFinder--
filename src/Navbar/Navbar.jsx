@@ -1,7 +1,7 @@
 import Home from '/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/round.png'
 import Search from '/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Search.png'
-import likes from '/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/likes.png'
 import logo from '/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Logo/Your paragraph text.png'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
 
@@ -14,10 +14,14 @@ export const Navbar = () => {
                 <img src={logo} alt="logo" />
 
                     <div className='flex flex-col gap-y-20'>
-
-                        <img src={Home} alt="homeIcon" className='w-[32px] h-[32px]'/>
-                        <img src={Search} alt="homeIcon" className='w-[32px] h-[32px]' />
-                        <img src={likes} alt="homeIcon" className='w-[32px] h-[32px]' />
+                        
+                        <Link to='/'>
+                            <img src={Home} alt="homeIcon" className='w-[32px] h-[32px]'/>
+                        </Link>
+                        
+                        <Link to='search'>
+                            <img src={Search} alt="searchIcon" className='w-[32px] h-[32px]' />
+                        </Link>
 
                     </div>
 

@@ -21,6 +21,7 @@ export const NowPlaying = () => {
             await response.json().then((response) => {
 
                 setNowPlaying(response.results.slice(0, 10))
+                displayMovie(response.results[0].original_title, response.results[0].overview, response.results[0].backdrop_path)
             })
 
             setLoading(false)
@@ -63,7 +64,7 @@ export const NowPlaying = () => {
 
                     {nowPlaying.map((movie, i) => 
                     
-                        <div className="flex flex-col items-center gap-y-4" key={i} onClick={() => displayMovie(movie.title, movie.overview, movie.backdrop_path)}>
+                        <div className="flex flex-col items-center gap-y-4" key={i} onClick={() => displayMovie(movie.title, movie.overview, movie.backdrop_path)} id="fade">
                             
                             <div className="border-2 border-black h-[300px] w-[300px] rounded-2xl">
                               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="movieImage" className="w-[300px] h-[300px] rounded-2xl object-fill object-center"   />
@@ -76,7 +77,6 @@ export const NowPlaying = () => {
                     
                     )}
 
-                    <div>See All</div>
 
                 </div>
 
@@ -88,6 +88,9 @@ export const NowPlaying = () => {
 }
 
 export const MostPopular = () => {
+
+  const {showMovie, setShowMovie} = useContext(MovieContext)
+
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -120,6 +123,13 @@ export const MostPopular = () => {
   
     }, [])
 
+
+    const displayMovie = (title, info, backdrop) => {
+
+      setShowMovie({title: title, info: info, backdrop: `https://image.tmdb.org/t/p/original/${backdrop}`})
+      console.log(showMovie)
+    }
+
     return (
 
         <>
@@ -138,7 +148,7 @@ export const MostPopular = () => {
 
                     {mostPopular.map((movie, i) => 
                     
-                        <div className="flex flex-col items-center gap-y-4" key={i}>
+                        <div className="flex flex-col items-center gap-y-4" onClick={() => displayMovie(movie.title, movie.overview, movie.backdrop_path)} key={i}>
                             
                             <div className="border-2 border-black h-[300px] w-[300px] rounded-2xl">
                               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="movieImage" className="w-[300px] h-[300px] rounded-2xl object-fill object-center"   />
@@ -152,7 +162,6 @@ export const MostPopular = () => {
                     
                     )}
 
-                    <div>See All</div>
 
                 </div>
 
@@ -164,6 +173,9 @@ export const MostPopular = () => {
 }
 
 export const TopRated = () => {
+
+  const {showMovie, setShowMovie} = useContext(MovieContext)
+
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -195,6 +207,13 @@ export const TopRated = () => {
   
     }, [])
 
+
+    const displayMovie = (title, info, backdrop) => {
+
+      setShowMovie({title: title, info: info, backdrop: `https://image.tmdb.org/t/p/original/${backdrop}`})
+      console.log(showMovie)
+    }
+
     console.log(movieInfo)
 
 
@@ -215,7 +234,7 @@ export const TopRated = () => {
 
                   {movieInfo.map((movie, i) => 
 
-                          <div className="flex flex-col items-center gap-y-4" key={i}>
+                          <div className="flex flex-col items-center gap-y-4" onClick={() => displayMovie(movie.title, movie.overview, movie.backdrop_path)} key={i}>
                                                       
                             <div className="border-2 border-black h-[300px] w-[300px] rounded-2xl">
                               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="movieImage" className="w-[300px] h-[300px] rounded-2xl object-fill object-center"   />
@@ -233,6 +252,9 @@ export const TopRated = () => {
 }
 
 export const Upcoming = () => {
+
+  const {showMovie, setShowMovie} = useContext(MovieContext)
+
 
       
     const [loading, setLoading] = useState(true)
@@ -266,6 +288,13 @@ export const Upcoming = () => {
   
     }, [])
 
+
+    const displayMovie = (title, info, backdrop) => {
+
+      setShowMovie({title: title, info: info, backdrop: `https://image.tmdb.org/t/p/original/${backdrop}`})
+      console.log(showMovie)
+    }
+
     return (
 
         <>
@@ -284,7 +313,7 @@ export const Upcoming = () => {
 
                     {upcoming.map((movie, i) => 
                     
-                          <div className="flex flex-col items-center gap-y-4" key={i}>
+                          <div className="flex flex-col items-center gap-y-4" onClick={() => displayMovie(movie.title, movie.overview, movie.backdrop_path)} key={i}>
                               
                           <div className="flex flex-col items-center gap-y-4" key={i}>
                                                         
@@ -300,7 +329,6 @@ export const Upcoming = () => {
                     
                     )}
 
-                    <div>See All</div>
 
                 </div>
 
