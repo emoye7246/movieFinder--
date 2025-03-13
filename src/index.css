@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: 'playfairText';
-    src: url('/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+    src: url('/assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
   }
 
   @font-face {
     font-family: 'Robotos';
-    src: url('/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Fonts/Roboto/static/Roboto_SemiCondensed-Regular.ttf');
+    src: url('/assets/Fonts/Roboto/static/Roboto_Condensed-Regular.ttf');
   }
   
 

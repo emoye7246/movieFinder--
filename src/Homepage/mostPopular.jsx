@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react"
-import Playfair from '/Users/elijahmoye/Desktop/moveieFinder/movieFinder--/src/assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf'
 import { MovieContext } from "./Homepage"
 
 export const NowPlaying = () => {
@@ -55,7 +54,7 @@ export const NowPlaying = () => {
                 {error && <div>Please check your internet connection and we will see what we can do on our end To solve this issue</div>}
 
  
-                <div className="flex flex-row gap-x-2 text-[32px] font-[Playfair]">
+                <div className="flex flex-row gap-x-2 text-[32px]" style={{fontFamily: 'playfairText'}}>
                   <div className="text-white">Now</div>
                   <div className="text-[#F3DFCC]">Playing</div>
                 </div>
@@ -140,7 +139,7 @@ export const MostPopular = () => {
                 {error && <div>Please check your internet connection and we will see what we can do on our end To solve this issue</div>}
 
 
-                <div className="flex flex-row gap-x-2 text-[32px] font-[Playfair]">
+                <div className="flex flex-row gap-x-2 text-[32px]" style={{fontFamily: 'playfairText'}}>
                   <div className="text-[#F3DFCC]">Most</div>
                   <div className="text-white">Popular</div>
                 </div>
@@ -225,7 +224,7 @@ export const TopRated = () => {
               {loading && <div>We will be right with you in one moment</div>}
               {error && <div>Please check your internet connection and we will see what we can do on our end To solve this issue</div>}
               
-                <div className="flex flex-row gap-x-2 text-[32px] font-[Playfair]">
+                <div className="flex flex-row gap-x-2 text-[32px]" style={{fontFamily: 'playfairText'}}>
                   <div className=" text-white">Top</div>
                   <div className="text-[#F3DFCC]">Rated</div>
                 </div>
@@ -305,7 +304,7 @@ export const Upcoming = () => {
                 {error && <div>Please check your internet connection and we will see what we can do on our end To solve this issue</div>}
 
 
-                <div className="flex flex-row gap-x-2 text-[32px] font-[Playfair]">
+                <div className="flex flex-row gap-x-2 text-[32px]" style={{fontFamily: 'playfairText'}}>
                   <div className="text-[#F3DFCC]">Upcoming</div>
                   <div className="text-white">Movies</div>
                 </div>
