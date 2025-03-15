@@ -1,12 +1,43 @@
-# React + Vite
+# Movie Finder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Movie Finder App is a clean and responsive web application that allows users to search for movies effortlessly. Built with React, it fetches real-time movie data from an external API and presents it in a visually appealing format. Users can search for any movie they desire and get detailed information such as title, description, release date, and ratings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features 
 
-## Expanding the ESLint configuration
+🔍 Movie Search – Instantly find any movie by title
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎬 Real-Time API Fetching – Get up-to-date movie details
+
+🎨 Tailwind CSS Styling – Modern and responsive UI design
+
+📜 Detailed Movie Info – View release date, synopsis, ratings, and more
+
+📱 Mobile-Friendly – Optimized for all screen sizes
+
+## Tech Stack
+
+Frontend: React.js, JavaScript, HTML, CSS
+
+API: Fetching movie data from an external movie database API (e.g., OMDB, TMDB)
+
+Styling: Tailwind CSS for a sleek and responsive layout
+
+## Usage 
+
+Enter a movie title in the search bar.
+
+Browse through the search results to find your desired movie.
+
+Click on a movie to view detailed information.
+
+## To the Future 
+
+⭐ Favorites & Watchlist – Save movies to a personal list
+
+🎭 Actor & Director Info – Show additional details about the cast
+
+🌍 Genre Filtering – Search movies by category
+
+🌑 Dark Mode Support – Toggle between light and dark themes
